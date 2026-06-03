@@ -7,44 +7,44 @@ import {
 
 const faqs = [
   {
-    question: "Posso cancelar a qualquer momento?",
+    question: "Como funciona a transcrição de áudio?",
     answer:
-      "Sim. Sem multas ou fidelidade. Ao cancelar, você mantém acesso até o fim do período pago.",
+      "Usamos OpenAI Whisper para transcrever em tempo real. O áudio é dividido em chunks de 30s com upload contínuo. A transcrição começa enquanto você ainda está consultando.",
   },
   {
-    question: "Os dados dos pacientes são seguros?",
+    question: "A IA gera o prontuário completo?",
     answer:
-      "Todos os dados sensíveis são criptografados com AES-256-GCM exclusivo por clínica. Conformidade LGPD completa.",
+      "Sim. GPT-4o extrai dados clínicos da transcrição e estrutura em 14 seções (padrão CFM). Você revisa, edita e confirma antes de assinar. Nunca é 100% automático — você tem controle total.",
   },
   {
-    question: "O que acontece ao fim do trial?",
+    question: "Como funciona a sugestão de CID-10?",
     answer:
-      "Você pode assinar um plano pago para continuar. Seus dados ficam disponíveis para exportação por 30 dias.",
+      "A IA sugere códigos CID-10 com nível de confiança. A busca é integrada ao catálogo oficial DATASUS (14.233 códigos). Você confirma ou altera antes de finalizar.",
   },
   {
-    question: "Posso mudar de plano depois?",
+    question: "O prontuário é válido legalmente?",
     answer:
-      "Sim. Upgrade imediato com cobrança proporcional. Downgrade entra em vigor no próximo ciclo.",
+      "Sim, com assinatura digital SHA-256. Cada prontuário tem um token único e imutável. Qualquer pessoa pode validar a autenticidade via link público. Falta ICP-Brasil para valor jurídico pleno (em roadmap).",
   },
   {
-    question: "Funciona para equipes?",
+    question: "Como funciona a verificação pública?",
     answer:
-      "Sim. Cada clínica pode ter múltiplos profissionais com perfis de acesso distintos.",
+      "Você gera um link público com token SHA-256. Pacientes, convênios e peritos conseguem validar a autenticidade do documento SEM fazer login. Perfeito para compartilhamento seguro.",
   },
   {
-    question: "E se eu perder meus dados?",
+    question: "Meus dados estão seguros?",
     answer:
-      "Fazemos backup diário com RPO de 24 horas. Em caso de falha crítica, nosso RTO é de 4 horas. Você também pode exportar todos os seus dados a qualquer momento.",
+      "Sim. RLS ativo em todas as tabelas, consentimento LGPD checado, dados isolados por médico (multi-tenant). Conformidade LGPD completa. Falta: política de retenção e logs de acesso avançados.",
   },
   {
-    question: "Meus dados ficam seguros se eu cancelar?",
+    question: "Funciona no celular?",
     answer:
-      "Após o cancelamento, seus dados ficam disponíveis para exportação por 30 dias. Um ZIP completo é gerado automaticamente.",
+      "Sim. É uma PWA instalável. Funciona em iOS e Android. Você consegue gravar consultas e acessar prontuários offline (com sincronização quando voltar online).",
   },
   {
-    question: "Existe integração com outros sistemas?",
+    question: "Qual é o diferencial comparado a outros prontuários?",
     answer:
-      "Sim. Oferecemos API de integração nos planos Pro e Clínica. Fale com nosso time para mais detalhes.",
+      "Captura por voz + transcrição automática + prontuário CFM estruturado + conselheiro clínico com PubMed + verificação pública. Nenhum outro prontuário combina isso tudo.",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function FAQ() {
             Perguntas Frequentes
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Encontre respostas para as dúvidas mais comuns sobre a MedCare.
+            Tudo que você precisa saber sobre a plataforma, IA e compliance.
           </p>
         </div>
 
@@ -82,10 +82,10 @@ export default function FAQ() {
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
-            Ainda tem dúvidas? Estamos aqui para ajudar.
+            Ainda tem dúvidas? Agende uma conversa com nosso time.
           </p>
           <a
-            href="mailto:support@medcare.com"
+            href="mailto:contato@medcare.com"
             className="inline-block px-6 py-2 text-primary hover:text-primary/80 font-semibold transition-colors"
           >
             Fale com nosso suporte →

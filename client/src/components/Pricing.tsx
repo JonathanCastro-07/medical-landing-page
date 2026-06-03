@@ -4,48 +4,52 @@ import { Check } from "lucide-react";
 
 const plans = [
   {
-    name: "Starter",
-    price: "67",
-    description: "Ideal para profissionais iniciando",
+    name: "Profissional",
+    price: "Consulte",
+    description: "Para médicos autônomos e profissionais de saúde",
     features: [
-      "Até 100 pacientes",
-      "1 usuário",
-      "Prontuários básicos",
-      "Agenda simples",
+      "Até 500 consultas/mês",
+      "Gravação de áudio ilimitada",
+      "Transcrição com Whisper",
+      "Prontuário CFM automático",
+      "Sugestão de CID-10",
+      "Assinatura digital",
+      "Verificação pública",
       "Suporte por email",
-      "Backup diário",
     ],
     highlighted: false,
   },
   {
-    name: "Pro",
-    price: "127",
-    description: "Recomendado para clínicas em crescimento",
+    name: "Clínica",
+    price: "Consulte",
+    description: "Para clínicas e consultórios com múltiplos médicos",
     features: [
-      "Até 1.000 pacientes",
-      "5 usuários",
-      "Prontuários avançados",
-      "Agenda multiprofissional",
-      "Anamnese digital",
-      "Assinatura qualificada",
+      "Consultas ilimitadas",
+      "Múltiplos médicos",
+      "Conselheiro clínico com PubMed",
+      "Gestão de pacientes",
+      "Dashboard e analytics",
+      "Prescrição integrada",
+      "Relatórios e repositório",
       "Suporte prioritário",
-      "Relatórios financeiros",
+      "Integração com EHR (roadmap)",
     ],
     highlighted: true,
   },
   {
-    name: "Clínica",
-    price: "197",
-    description: "Para clínicas consolidadas",
+    name: "Enterprise",
+    price: "Customizado",
+    description: "Para redes, hospitais e grandes operações",
     features: [
-      "Pacientes ilimitados",
-      "Usuários ilimitados",
-      "Todos os recursos Pro",
-      "Subdomínio próprio",
+      "Tudo do plano Clínica",
+      "ICP-Brasil (roadmap)",
+      "Receituário controlado (roadmap)",
       "API de integração",
-      "Gestão financeira completa",
+      "Logs de auditoria avançados",
+      "SLA dedicado",
+      "Consultoria de implementação",
+      "Treinamento de equipe",
       "Suporte 24/7",
-      "Consultoria personalizada",
     ],
     highlighted: false,
   },
@@ -57,10 +61,10 @@ export default function Pricing() {
       <div className="container">
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Planos que se adaptam ao seu negócio
+            Planos para Todos os Tamanhos
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            14 dias grátis, sem cartão de crédito. Cancele quando quiser.
+            Desde profissionais autônomos até grandes redes de saúde. Sem contratos de longa duração.
           </p>
         </div>
 
@@ -77,7 +81,7 @@ export default function Pricing() {
               {plan.highlighted && (
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
-                    RECOMENDADO
+                    MAIS POPULAR
                   </span>
                 </div>
               )}
@@ -90,10 +94,9 @@ export default function Pricing() {
               </p>
 
               <div className="mb-8">
-                <span className="text-4xl font-bold text-primary">
-                  R$ {plan.price}
+                <span className="text-3xl font-bold text-primary">
+                  {plan.price}
                 </span>
-                <span className="text-muted-foreground ml-2">/mês</span>
               </div>
 
               <Button
@@ -104,13 +107,13 @@ export default function Pricing() {
                 }`}
                 variant={plan.highlighted ? "default" : "outline"}
               >
-                Começar com {plan.name}
+                Solicitar Demo
               </Button>
 
               <div className="space-y-4 flex-1">
                 {plan.features.map((feature, featureIdx) => (
                   <div key={featureIdx} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-foreground">{feature}</span>
                   </div>
                 ))}
@@ -121,10 +124,10 @@ export default function Pricing() {
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
-            Precisa de um plano customizado?
+            Quer um plano customizado? Fale com nosso time.
           </p>
           <Button variant="outline" className="border-primary text-primary hover:bg-primary/5">
-            Fale com nosso time
+            Agendar Conversa
           </Button>
         </div>
       </div>

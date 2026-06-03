@@ -4,34 +4,34 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "A anamnese digital mudou minha rotina. Meus pacientes chegam com as informações já preenchidas — aproveito muito mais o tempo de consulta.",
-    author: "Dra. Camila R.",
-    role: "Psicóloga",
-    avatar: "C",
+      "Não preciso mais digitar notas. Gravo a consulta, a IA estrutura tudo em 5 minutos. Prontuário pronto para assinar.",
+    author: "Dr. Ricardo S.",
+    role: "Cardiologista",
+    avatar: "R",
     rating: 5,
   },
   {
     quote:
-      "Finalmente um prontuário que entende o fluxo de um nutricionista. Templates customizáveis, histórico de versões e tudo criptografado.",
-    author: "Carlos M.",
-    role: "Nutricionista",
-    avatar: "C",
+      "A sugestão de CID-10 é muito precisa. Economiza tempo e reduz erros de codificação. Já valida com meus pacientes.",
+    author: "Dra. Marina L.",
+    role: "Clínica Geral",
+    avatar: "M",
     rating: 5,
   },
   {
     quote:
-      "A assinatura eletrônica com CPF + WhatsApp é um diferencial enorme. Sem papel, sem impressão, com validade jurídica.",
-    author: "Dra. Fernanda S.",
-    role: "Fisioterapeuta",
+      "O link de verificação pública é um diferencial. Meus pacientes conseguem validar o documento e compartilhar com convênios.",
+    author: "Dr. Felipe M.",
+    role: "Ortopedista",
     avatar: "F",
     rating: 5,
   },
   {
     quote:
-      "Organização perfeita da agenda, integração com WhatsApp e relatórios financeiros automáticos. Recomendo!",
-    author: "Dr. Paulo V.",
-    role: "Médico",
-    avatar: "P",
+      "Transcrição em tempo real é impecável. Funciona bem até em consultório com ruído. Muito melhor que digitar tudo.",
+    author: "Dra. Juliana P.",
+    role: "Pediatra",
+    avatar: "J",
     rating: 5,
   },
 ];
@@ -42,10 +42,10 @@ export default function Testimonials() {
       <div className="container">
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Profissionais que confiam na plataforma
+            Médicos que Confiam na Plataforma
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Veja o que nossos usuários têm a dizer sobre a MedCare.
+            Veja o que profissionais de saúde dizem sobre a transformação da sua rotina clínica.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export default function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-4 pt-4 border-t border-border">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold text-lg">
                     {testimonial.avatar}
                   </span>

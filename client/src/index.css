@@ -44,7 +44,8 @@
 
 :root {
   /* Medical Minimalism Color Palette */
-  --primary: #4F8FD4;
+  --primary: #0d9688;
+  --button-primary: #0d9688;
   --primary-foreground: #FFFFFF;
   --secondary: #A8D8D8;
   --secondary-foreground: #2C3E50;
@@ -56,7 +57,7 @@
   --destructive-foreground: #FFFFFF;
   --border: #E8EEF5;
   --input: #F5F7FA;
-  --ring: #4F8FD4;
+  --ring: #0d9688;
 
   /* Semantic colors */
   --background: #FFFFFF;
@@ -69,15 +70,15 @@
   /* Sidebar colors */
   --sidebar: #F5F7FA;
   --sidebar-foreground: #2C3E50;
-  --sidebar-primary: #4F8FD4;
+  --sidebar-primary: #0d9688;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: #A8D8D8;
   --sidebar-accent-foreground: #2C3E50;
   --sidebar-border: #E8EEF5;
-  --sidebar-ring: #4F8FD4;
+  --sidebar-ring: #0d9688;
 
   /* Chart colors */
-  --chart-1: #4F8FD4;
+  --chart-1: #0d9688;
   --chart-2: #A8D8D8;
   --chart-3: #6EC07A;
   --chart-4: #F39C12;
@@ -98,13 +99,13 @@
   --muted-foreground: #A8B5C5;
   --border: #2C3E50;
   --input: #2C3E50;
-  --ring: #4F8FD4;
+  --ring: #0d9688;
   --sidebar: #1A1F2E;
   --sidebar-foreground: #F5F7FA;
   --sidebar-accent: #A8D8D8;
   --sidebar-accent-foreground: #0F1419;
   --sidebar-border: #2C3E50;
-  --sidebar-ring: #4F8FD4;
+  --sidebar-ring: #0d9688;
 }
 
 @layer base {
@@ -204,6 +205,17 @@
   button:active,
   [role="button"]:active {
     @apply scale-95;
+  }
+
+  /* Custom button styling with teal color */
+  button:not([class*="outline"]):not([class*="ghost"]):not([class*="secondary"]),
+  [role="button"]:not([class*="outline"]):not([class*="ghost"]):not([class*="secondary"]) {
+    background-color: var(--button-primary);
+  }
+
+  button:not([class*="outline"]):not([class*="ghost"]):not([class*="secondary"]):hover,
+  [role="button"]:not([class*="outline"]):not([class*="ghost"]):not([class*="secondary"]):hover {
+    background-color: color-mix(in srgb, var(--button-primary) 90%, black);
   }
 
   /* Section spacing */

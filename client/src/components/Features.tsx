@@ -1,49 +1,49 @@
 import { Card } from "@/components/ui/card";
 import {
+  Mic,
+  Brain,
   FileText,
-  Calendar,
-  Lock,
-  MessageSquare,
-  BarChart3,
-  Globe,
+  Stethoscope,
+  BookOpen,
+  Shield,
 } from "lucide-react";
 
 const features = [
   {
+    icon: Mic,
+    title: "Gravação de Áudio",
+    description:
+      "Grava a consulta em chunks de 30s com upload contínuo. Funciona no celular (PWA) ou desktop.",
+  },
+  {
+    icon: Brain,
+    title: "Transcrição com IA",
+    description:
+      "OpenAI Whisper transcreve em tempo real. Separa automaticamente fala com paciente de instruções ditadas.",
+  },
+  {
     icon: FileText,
-    title: "Prontuários Eletrônicos",
+    title: "Prontuário CFM Automático",
     description:
-      "Templates personalizados por especialidade. Campos dinâmicos, histórico de versões e armazenamento criptografado.",
+      "Gera prontuário estruturado em 14 seções (padrão CFM). Pronto para revisão, edição e assinatura digital.",
   },
   {
-    icon: MessageSquare,
-    title: "Anamnese Digital",
+    icon: Stethoscope,
+    title: "Sugestão de CID-10",
     description:
-      "Envie links de anamnese por WhatsApp. O paciente preenche no celular antes da consulta, com consentimento LGPD.",
+      "IA sugere códigos CID-10 com nível de confiança. Busca integrada no catálogo oficial DATASUS (14.233 códigos).",
   },
   {
-    icon: Calendar,
-    title: "Agenda Integrada",
+    icon: BookOpen,
+    title: "Conselheiro Clínico",
     description:
-      "Visualização semanal, múltiplos profissionais e lembretes automáticos para o paciente.",
+      "Sugestões de exames, red flags, diagnósticos diferenciais e protocolos. Artigos PubMed traduzidos para português.",
   },
   {
-    icon: Lock,
-    title: "Assinatura Qualificada",
+    icon: Shield,
+    title: "Assinatura Digital Segura",
     description:
-      "Declarações e contratos assinados via CPF + OTP no WhatsApp. Não-repúdio sem certificado digital.",
-  },
-  {
-    icon: BarChart3,
-    title: "Gestão Financeira",
-    description:
-      "Acompanhe receita, repasse médico e fluxo de caixa em tempo real com relatórios prontos.",
-  },
-  {
-    icon: Globe,
-    title: "Subdomínio Próprio",
-    description:
-      "Sua clínica em suaclinica.medcare.com.br com SSL automático e disponibilidade 24/7.",
+      "Hash SHA-256 + token de verificação. Link público compartilhável para validação sem login.",
   },
 ];
 
@@ -53,17 +53,17 @@ export default function Features() {
       <div className="container">
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Tudo que você precisa para uma clínica moderna
+            Diferenciais de Inteligência Artificial
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Desenvolvido para psicólogos, nutricionistas, fisioterapeutas e outros profissionais de saúde.
+            Tudo que você precisa para capturar, estruturar e validar prontuários médicos com segurança e conformidade.
           </p>
         </div>
 
         <div className="mb-12 md:mb-16">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663707783547/G8iUbg3cn2yoC26ePGHw5a/features-illustration-jN66fQEu8bZjSmyHZeT3T2.webp"
-            alt="Recursos MedCare"
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663707783547/G8iUbg3cn2yoC26ePGHw5a/ai-transcription-cfm-flow-P4Re29pLEqyh2QvxgdM9Pt.webp"
+            alt="Fluxo de IA: Áudio para Prontuário CFM"
             className="rounded-2xl shadow-lg border border-border w-full"
           />
         </div>

@@ -47,28 +47,28 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Compliance */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Empresa</h4>
+            <h4 className="font-semibold">Conformidade</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Sobre
+                  CFM Resolução 2.314/22
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Blog
+                  LGPD
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Contato
+                  Segurança de Dados
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Status
+                  Auditoria
                 </a>
               </li>
             </ul>
@@ -127,8 +127,8 @@ export default function Footer() {
             <p>
               © {currentYear} MedCare. Todos os direitos reservados.
             </p>
-            <p className="flex items-center justify-center gap-1">
-              Feito com <Heart className="w-4 h-4 fill-current" /> para profissionais de saúde
+            <p>
+              Conforme CFM, LGPD e segurança de dados. Assinatura digital SHA-256 + verificação pública.
             </p>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Mic, Zap, CheckCircle2 } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -9,33 +9,44 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
+                <Zap className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-primary">Prontuário com IA</span>
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Prontuário Médico
-                <span className="text-primary block">Inteligente e Seguro</span>
+                Grava a Consulta,
+                <span className="text-primary block">a IA Estrutura o Prontuário</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Organize sua clínica, cuide melhor dos seus pacientes. Prontuários eletrônicos, agenda integrada e documentos com assinatura qualificada — tudo em um só lugar.
+                Transcrição automática em tempo real, geração de prontuário no padrão CFM com 14 seções, sugestão de CID-10 e conselheiro clínico com evidência científica.
               </p>
             </div>
 
-            {/* Features List */}
-            <div className="space-y-3">
-              {[
-                "Prontuários eletrônicos com templates personalizados",
-                "Anamnese digital com consentimento LGPD",
-                "Agenda integrada com lembretes automáticos",
-              ].map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">{feature}</span>
-                </div>
-              ))}
+            {/* How It Works - Quick */}
+            <div className="space-y-3 bg-white border border-border rounded-lg p-6">
+              <p className="text-sm font-semibold text-muted-foreground">FLUXO EM 5 PASSOS</p>
+              <div className="space-y-2">
+                {[
+                  "Seleciona paciente e aceita LGPD",
+                  "Grava a consulta por áudio",
+                  "IA transcreve e estrutura dados clínicos",
+                  "Revisa, confirma CID-10 e vê sugestões",
+                  "Assina digitalmente e compartilha",
+                ].map((step, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <span className="text-xs font-bold text-primary bg-primary/10 rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">
+                      {idx + 1}
+                    </span>
+                    <span className="text-sm text-foreground pt-0.5">{step}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
-                Começar Grátis por 14 Dias
+                Começar Teste Grátis
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button
@@ -43,25 +54,21 @@ export default function Hero() {
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary/5"
               >
-                Ver Planos
+                Ver Demo
               </Button>
             </div>
 
             {/* Trust Indicators */}
             <div className="pt-4 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-3">Confiado por profissionais de saúde</p>
-              <div className="grid grid-cols-3 gap-4">
+              <p className="text-sm text-muted-foreground mb-3">Conforme com CFM, LGPD e segurança de dados</p>
+              <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-2xl font-bold text-primary">2.400+</p>
-                  <p className="text-xs text-muted-foreground">Profissionais Ativos</p>
+                  <p className="text-2xl font-bold text-primary">14</p>
+                  <p className="text-xs text-muted-foreground">Seções CFM Automáticas</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-primary">310k</p>
-                  <p className="text-xs text-muted-foreground">Prontuários Criados</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-primary">99.9%</p>
-                  <p className="text-xs text-muted-foreground">Uptime</p>
+                  <p className="text-2xl font-bold text-primary">100%</p>
+                  <p className="text-xs text-muted-foreground">Assinatura Digital</p>
                 </div>
               </div>
             </div>
@@ -72,8 +79,8 @@ export default function Hero() {
             <div className="relative w-full">
               {/* Hero Dashboard Image */}
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663707783547/G8iUbg3cn2yoC26ePGHw5a/hero-medical-dashboard-bFjA8FNcdccRUMcnZuHtri.webp"
-                alt="MedCare Dashboard"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663707783547/G8iUbg3cn2yoC26ePGHw5a/hero-ai-medical-recording-GcX2ZnKM54MxoAnsd9b5YU.webp"
+                alt="Prontuário com IA"
                 className="rounded-2xl shadow-lg border border-border w-full"
               />
             </div>
