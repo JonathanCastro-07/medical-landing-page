@@ -107,7 +107,7 @@ export default function Pricing() {
                 }`}
                 variant={plan.highlighted ? "default" : "outline"}
               >
-                Solicite Agora
+                Solicitar Agora
               </Button>
 
               <div className="space-y-4 flex-1">

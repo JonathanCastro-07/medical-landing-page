@@ -37,12 +37,12 @@ export default function CTA() {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-white"
             >
-              Começar Teste Grátis
+              Comece agora mesmo
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
 
-          {/* Trust Indicators */}
+          {/* Trust Indicators
           <div className="grid grid-cols-3 gap-4 pt-8 border-t border-border">
             <div>
               <p className="text-2xl font-bold text-primary">14</p>
@@ -56,7 +56,7 @@ export default function CTA() {
               <p className="text-2xl font-bold text-primary">100%</p>
               <p className="text-xs text-muted-foreground">Funcional</p>
             </div>
-          </div>
+          </div> */}
 
           {/* Newsletter Section
           <div className="mt-12 pt-12 border-t border-border">

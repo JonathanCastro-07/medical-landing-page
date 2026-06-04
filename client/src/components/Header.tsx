@@ -19,8 +19,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <img src="public\img\logo-QROcgoY9.png" alt="logo" />
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">P</span>
             </div>
             <span className="font-bold text-xl text-foreground hidden sm:inline">
               Prontuário IA
