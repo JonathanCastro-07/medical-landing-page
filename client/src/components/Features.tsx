@@ -53,10 +53,11 @@ export default function Features() {
       <div className="container">
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Diferenciais de Inteligência Artificial
+            Sua Inteligência Artificial para Prontuários
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Tudo que você precisa para capturar, estruturar e validar prontuários médicos com segurança e conformidade.
+            Tudo que você precisa para capturar, estruturar e validar
+            prontuários médicos com segurança e conformidade.
           </p>
         </div>
 
