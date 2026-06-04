@@ -94,7 +94,7 @@ export default function Hero() {
             <div className="relative w-full">
               {/* Hero Dashboard Image */}
               <img
-                src="public\img\prontuario-ia.png"
+                src="public\img\prontuarioIA.png"
                 alt="Prontuário com IA"
                 className="rounded-2xl shadow-lg border border-border w-full"
               />

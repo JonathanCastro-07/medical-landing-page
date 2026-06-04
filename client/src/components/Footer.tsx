@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-16 h-16">
-                <img src="public\img\fundo-transparente.png" alt="logo" />
+                <img src="public\img\logoIA.png" alt="Logo" />
               </div>
               <span className="font-bold text-lg">Prontuário IA</span>
             </div>
