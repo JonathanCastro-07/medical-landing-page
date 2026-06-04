@@ -20,7 +20,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-14 h-14 flex items-center justify-center">
-              <img src="public\img\logoIA.png" alt="Logo" />
+              <img src="/img/logoIA.png" alt="Logo" />
             </div>
             <span className="font-bold text-xl text-foreground hidden sm:inline">
               Prontuário IA

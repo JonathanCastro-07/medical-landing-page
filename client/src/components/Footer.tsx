@@ -6,12 +6,12 @@ export default function Footer() {
   return (
     <footer className="bg-foreground text-white py-12 md:py-16">
       <div className="container">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="flex gap-8 mb-12 justify-between">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-16 h-16">
-                <img src="public\img\logoIA.png" alt="Logo" />
+                <img src="/img/logoIA.png" alt="Logo" />
               </div>
               <span className="font-bold text-lg">Prontuário IA</span>
             </div>
@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
 
           {/* Product */}
-          <div className="space-y-4 ">
+          <div className="space-y-4 pr-10 ">
             <h4 className="font-semibold">Produto</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
